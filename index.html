@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-category="transcribe">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>voxmpe studio</title>
+    <script type="module" crossorigin src="./assets/index-Cauh44nG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DBWNlVKE.css">
+  </head>
+  <body>
+    <header class="bar">
+      <strong>voxmpe</strong>
+      <button id="record">Record</button>
+      <input id="take-name" aria-label="Name for the next recording" />
+      <span id="rec-status"></span>
+      <select id="takes" aria-label="Open a take"></select>
+      <button id="delete-take" hidden title="Delete this take from the browser">Delete</button>
+      <label>Tuning <select id="tuning"></select></label>
+      <input id="scl-file" type="file" accept=".scl" hidden />
+      <input id="wav-file" type="file" accept=".wav,audio/wav" hidden />
+      <label>Anchor <select id="anchor"></select></label>
+      <input id="anchor-custom" type="number" step="0.1" min="1" aria-label="Anchor frequency in Hz" hidden />
+      <span id="tuning-error" class="error" role="alert"></span>
+      <span id="note-count"></span>
+      <button id="fit" hidden title="Show the whole take (double-click the roll, or press 0)">Fit</button>
+    </header>
+    <p id="message" class="message" role="status"></p>
+    <p id="privacy" class="message" hidden>Your recordings stay in this browser and are never uploaded.</p>
+    <main>
+      <canvas id="roll"></canvas>
+      <aside id="controls"></aside>
+    </main>
+    <footer class="bar">
+      <button id="play">Play (Space)</button>
+      <span role="radiogroup" aria-label="Listen to">
+        <label><input type="radio" name="listen" value="voice" /> Voice</label>
+        <label><input type="radio" name="listen" value="midi" checked /> MIDI</label>
+        <label><input type="radio" name="listen" value="both" /> Both</label>
+      </span>
+      <span class="formats" aria-label="Save as">
+        <label><input type="checkbox" name="format" value="mid" /> .mid</label>
+        <label><input type="checkbox" name="format" value="als" /> .als (Live)</label>
+      </span>
+      <button id="save">Save</button>
+      <span id="drags"></span>
+      <button id="reveal" hidden>Reveal in Finder</button>
+      <span id="saved-path"></span>
+      <span class="legend" aria-label="Piano roll key">
+        <span class="mk slash"></span> pitch change
+        <span class="mk tick"></span> re-attack
+        <span>no mark: after a gap</span>
+        <span class="ln"></span> MIDI pitch
+        <span class="ln mut"></span> sung pitch
+        <span>pinch or ⌘+scroll to zoom, drag to pan</span>
+      </span>
+    </footer>
+  </body>
+</html>
