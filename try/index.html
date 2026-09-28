@@ -16,16 +16,20 @@
         if (t === "paper" || t === "night") document.documentElement.dataset.theme = t;
       })();
     </script>
-    <script type="module" crossorigin src="../assets/try-DvCdCC1U.js"></script>
+    <script type="module" crossorigin src="../assets/try-_Gzsz8ZM.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/recorder-Cdp40W9x.js">
     <link rel="stylesheet" crossorigin href="../assets/try-DB4RFT_o.css">
   </head>
   <body>
     <div id="demo">
+      <!-- The DEMO mark belongs to the roll box alone: the stage's own mark
+           stays under this wrapper, and the box asks for a mark of its own,
+           a grid centred on the box and clipped by its border. -->
+      <div class="try-body" data-demoshell-nomark>
       <p id="message" class="try-message" role="status"></p>
-      <div class="try-stage">
+      <div class="try-stage" data-demoshell-mark>
         <canvas id="roll"></canvas>
-        <p id="empty" class="try-empty"><span>The piano roll shows up here after a take. No mic handy? <button id="sample-link" type="button" class="try-link">Try a starling's song.</button></span></p>
+        <p id="empty" class="try-empty"><span id="empty-text">The piano roll shows up here after a take. No mic handy? <button id="sample-link" type="button" class="try-link">Try a starling's song.</button></span></p>
       </div>
       <div class="try-toolbar">
         <div class="try-toolbar-transport">
@@ -45,6 +49,7 @@
         </label>
       </div>
       <p class="try-fine">Takes stay in this browser and are never uploaded. Starling song: <a href="https://freesound.org/s/737756/" target="_blank" rel="noopener">Vrymaa, Freesound</a>, CC0.</p>
+      </div>
     </div>
   </body>
 </html>
