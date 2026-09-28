@@ -20,9 +20,9 @@
         if (q.get("embed") === "1") document.documentElement.classList.add("embed");
       })();
     </script>
-    <script type="module" crossorigin src="./assets/main-Cx_bSCDH.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/recorder-Cdp40W9x.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-lNOXW6ll.css">
+    <script type="module" crossorigin src="./assets/main-qtsKmrrA.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/recorder-4W9O3E7L.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-CwNv3mh9.css">
   </head>
   <body>
     <header class="bar">
@@ -65,10 +65,12 @@
         <label><input type="radio" name="listen" value="both" /> Both</label>
       </span>
       <span class="formats" aria-label="Save as">
-        <label><input type="checkbox" name="format" value="mid" /> .mid</label>
-        <label><input type="checkbox" name="format" value="als" /> .als (Live)</label>
+        <label title="MPE: each note on its own channel, glides and tuning as pitch bend (±48)"><input type="checkbox" name="format" value="mid" /> MIDI (any MPE synth)</label>
+        <label title="A .mid whose notes are the tuning's steps, and the tuning as an .ascl file"><input type="checkbox" name="format" value="live" /> MIDI + tuning for Live 12</label>
+        <label><input type="checkbox" name="format" value="als" /> .als (Live set)</label>
       </span>
       <button id="save">Save</button>
+      <span id="live-hint" class="fine" hidden>Load the tuning file in Live's Tuning section, then drag the MIDI in.</span>
       <span id="drags"></span>
       <button id="reveal" hidden>Reveal in Finder</button>
       <span id="saved-path"></span>
