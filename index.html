@@ -20,16 +20,17 @@
         if (q.get("embed") === "1") document.documentElement.classList.add("embed");
       })();
     </script>
-    <script type="module" crossorigin src="./assets/main-Bdy23Zux.js"></script>
+    <script type="module" crossorigin src="./assets/main-CRFW1rs0.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/recorder-CfAJe8YM.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-uftjeibg.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-Bp2E4AzV.css">
   </head>
   <body>
     <header class="bar">
       <strong class="wordmark">Starling<span class="wordmark-dot">.</span></strong>
+      <span class="tagline">simply sing.</span>
       <span class="group" aria-label="Take">
         <button id="record">Record</button>
-        <input id="take-name" aria-label="Name for the next recording" />
+        <input id="take-name" aria-label="Name for the next take" />
         <span id="rec-status"></span>
         <select id="takes" aria-label="Open a take"></select>
         <button id="delete-take" hidden title="Delete this take from the browser">Delete</button>
@@ -52,7 +53,7 @@
       <div class="stage">
         <canvas id="roll"></canvas>
         <div id="empty" class="empty">
-          <p>Record, or open a take from the menu above.</p>
+          <p>Record or open a take from the menu above.</p>
         </div>
       </div>
       <aside id="controls"></aside>
@@ -65,12 +66,12 @@
         <label><input type="radio" name="listen" value="both" /> Both</label>
       </span>
       <span class="formats" aria-label="Save as">
-        <label title="MPE: each note on its own channel, glides and tuning as pitch bend (±48)"><input type="checkbox" name="format" value="mid" /> MIDI (any MPE synth)</label>
-        <label title="A .mid whose notes are the tuning's steps, and the tuning as an .ascl file"><input type="checkbox" name="format" value="live" /> MIDI + tuning for Live 12</label>
-        <label><input type="checkbox" name="format" value="als" /> .als (Live set)</label>
+        <label title="MPE: each note on its own channel, glides and tuning as pitch bend (±48)"><input type="checkbox" name="format" value="mid" /> MIDI for any MPE synth</label>
+        <label title="A .mid whose notes are the tuning's steps, and the tuning as an .ascl file"><input type="checkbox" name="format" value="live" /> MIDI with the tuning (Ableton Live 12 and Scala synths)</label>
+        <label><input type="checkbox" name="format" value="als" /> Ableton Live set</label>
       </span>
       <button id="save">Save</button>
-      <span id="live-hint" class="fine" hidden>Load the tuning file in Live's Tuning section, then drag the MIDI in.</span>
+      <span id="live-hint" class="fine" hidden>Load the tuning file in Ableton Live's Tuning section, then drag the MIDI in.</span>
       <span id="drags"></span>
       <button id="reveal" hidden>Reveal in Finder</button>
       <span id="saved-path"></span>
@@ -82,7 +83,7 @@
         <span class="ln mut"></span> sung pitch
         <span>click or drag to move the playhead, pinch or ⌘+scroll to zoom, drag to pan when zoomed in</span>
       </span>
-      <span id="privacy" class="fine" hidden>Your recordings stay in this browser and are never uploaded.</span>
+      <span id="privacy" class="fine" hidden>Your takes stay in this browser and are never uploaded.</span>
     </footer>
   </body>
 </html>

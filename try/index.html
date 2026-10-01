@@ -16,9 +16,9 @@
         if (t === "paper" || t === "night") document.documentElement.dataset.theme = t;
       })();
     </script>
-    <script type="module" crossorigin src="../assets/try-DtA_A7dd.js"></script>
+    <script type="module" crossorigin src="../assets/try-yfpCiFr_.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/recorder-CfAJe8YM.js">
-    <link rel="stylesheet" crossorigin href="../assets/try-DqGof0gX.css">
+    <link rel="stylesheet" crossorigin href="../assets/try-D-LoabYF.css">
   </head>
   <body>
     <div id="demo">
@@ -26,11 +26,7 @@
            stays under this wrapper, and the box asks for a mark of its own,
            a grid centred on the box and clipped by its border. -->
       <div class="try-body" data-demoshell-nomark>
-      <p id="message" class="try-message" role="status"></p>
-      <div class="try-stage" data-demoshell-mark>
-        <canvas id="roll"></canvas>
-        <p id="empty" class="try-empty"><span id="empty-text">The piano roll shows up here after a take. No mic handy? <button id="sample-link" type="button" class="try-link">Try a starling's song.</button></span></p>
-      </div>
+      <!-- Record and Play first, top-left of the product (design 1.15), then the roll. -->
       <div class="try-toolbar">
         <div class="try-toolbar-transport">
           <button id="record" type="button" data-icon="record" data-toggle data-pressed-icon="stop" data-key="r"></button>
@@ -39,8 +35,8 @@
           <span id="rec-status" class="try-fine"></span>
         </div>
         <span class="try-toolbar-tuning try-tuning" role="radiogroup" aria-label="Tuning">
-          <label><input type="radio" name="tuning" value="" checked disabled /> 12-TET</label>
-          <label><input type="radio" name="tuning" value="53-edo" disabled /> 53-EDO makam</label>
+          <label><input type="radio" name="tuning" value="" checked disabled /> Standard</label>
+          <label><input type="radio" name="tuning" value="53-edo" disabled /> Turkish makam</label>
         </span>
         <label id="smoothing-row" class="try-toolbar-smoothing" hidden>
           <span>Smoothing</span>
@@ -48,6 +44,11 @@
           <span id="smoothing-val">0%</span>
         </label>
       </div>
+      <div class="try-stage" data-demoshell-mark>
+        <canvas id="roll"></canvas>
+        <p id="empty" class="try-empty"><span id="empty-text">The piano roll shows up here after a take. No mic handy? <button id="sample-link" type="button" class="try-link">Try a starling's song.</button></span></p>
+      </div>
+      <p id="message" class="try-message" role="status"></p>
       <p class="try-fine">Takes stay in this browser and are never uploaded. Starling song: <a href="https://freesound.org/s/737756/" target="_blank" rel="noopener">Vrymaa, Freesound</a>, CC0.</p>
       </div>
     </div>
